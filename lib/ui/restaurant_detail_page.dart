@@ -137,10 +137,11 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
                             )),
                             const SizedBox(width: 3),
                             Expanded(
-                                child: Text(
-                                    (widget.restaurant.rating).toString(),
-                                    style: TextStyle(
-                                        fontSize: screenWidth * 0.04))),
+                              child: Text(
+                                (widget.restaurant.rating).toString(),
+                                style: TextStyle(fontSize: screenWidth * 0.04),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -250,7 +251,7 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
                   right: 20,
                   top: 15,
                   child: Consumer<DatabaseProvider>(
-                    builder: (context, provider, child) {
+                    builder: (context, provider, _) {
                       return FutureBuilder<bool>(
                         future: provider.isFavorited(widget.restaurant.id),
                         builder: (context, snapshot) {
@@ -258,15 +259,13 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
                           return isFavorited
                               ? IconButton.filledTonal(
                                   icon: const Icon(Icons.favorite),
-                                  color:
-                                      Theme.of(context).colorScheme.error,
+                                  color: Theme.of(context).colorScheme.error,
                                   onPressed: () => provider
                                       .removeFavorited(widget.restaurant.id),
                                 )
                               : IconButton.filledTonal(
                                   icon: const Icon(Icons.favorite_border),
-                                  color:
-                                      Theme.of(context).colorScheme.error,
+                                  color: Theme.of(context).colorScheme.error,
                                   onPressed: () =>
                                       provider.addFavorite(widget.restaurant),
                                 );

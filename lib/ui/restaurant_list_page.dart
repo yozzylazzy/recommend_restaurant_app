@@ -19,6 +19,12 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
   List<Restaurant> allRestaurants = [];
 
   @override
+  void dispose() {
+    _search.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return OrientationWidget(
       portraitWidget: buildPortrait,

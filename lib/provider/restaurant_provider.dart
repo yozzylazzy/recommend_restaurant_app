@@ -53,7 +53,6 @@ class RestaurantProvider extends ChangeNotifier {
       _stateList = ResultState.error;
       _message = 'Internet Connection Failed!';
       notifyListeners();
-      throw ApiException(_message);
     } catch (e) {
       _stateList = ResultState.error;
       notifyListeners();
@@ -80,7 +79,6 @@ class RestaurantProvider extends ChangeNotifier {
       _stateDetail = ResultState.error;
       _message = 'Internet Connection Failed!';
       notifyListeners();
-      throw ApiException(_message);
     } catch (e) {
       _stateDetail = ResultState.error;
       notifyListeners();
@@ -113,7 +111,6 @@ class RestaurantProvider extends ChangeNotifier {
       _stateSearch = ResultState.error;
       _message = 'Internet Connection Failed!';
       notifyListeners();
-      throw ApiException(_message);
     } catch (e) {
       _stateSearch = ResultState.error;
       notifyListeners();

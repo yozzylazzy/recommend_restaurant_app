@@ -104,10 +104,12 @@ class _SearchScreenState extends State<SearchScreen> {
                     height: 10,
                   ),
                   Expanded(
-                      child: Container(
-                          constraints:
-                              const BoxConstraints(maxHeight: double.infinity),
-                          child: _buildList(context, width, height))),
+                    child: Container(
+                      constraints:
+                          const BoxConstraints(maxHeight: double.infinity),
+                      child: _buildList(context, width, height),
+                    ),
+                  ),
                 ],
               )
             : const Center(child: Text('Screen to small!')),
