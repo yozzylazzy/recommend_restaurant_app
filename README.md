@@ -52,11 +52,9 @@ The Restaurant Recommendation App is a Flutter application developed as part of 
 
 ## Screenshots
 
-![Screenshot 1](link/to/screenshot1.png)
-*Caption for Screenshot 1*
-
-![Screenshot 2](link/to/screenshot2.png)
-*Caption for Screenshot 2*
+<div align='left'>
+   <img src='github_assets/Recommend Restaurant Prototipe.gif' width='40%' alt='App Restaurant Gif'/>
+</div>
 
 ## Installation
 
