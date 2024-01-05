@@ -1,6 +1,8 @@
 # Restaurant Recommendation App
 
-![Restaurant Recommendation App Logo](link/to/logo.png)
+<div>
+   <img src='github_assets/img.png' width='50%'/>
+</div>
 
 ## Table of Contents
 - [Introduction](#introduction)
