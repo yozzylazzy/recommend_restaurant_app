@@ -20,6 +20,7 @@ import 'package:restaurant_app/provider/preferences_provider.dart';
 import 'package:restaurant_app/provider/database_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'common/navigation.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
@@ -33,7 +34,7 @@ void main() async {
     await AndroidAlarmManager.initialize();
   }
   await notificationHelper.initNotifications(flutterLocalNotificationsPlugin);
-
+  await dotenv.load(fileName: ".env");
   runApp(const RestaurantApp());
 }
 

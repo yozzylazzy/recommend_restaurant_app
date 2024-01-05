@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'dart:math';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import '../model/restaurant.dart';
 
 class ApiService {
-  static const String _baseUrl = "https://restaurant-api.dicoding.dev";
+  static final String _baseUrl = dotenv.get('CLIENT_URL');
 
   Future<RestaurantsResult> getListRestaurant(http.Client client) async {
     final response = await client.get(Uri.parse("$_baseUrl/list"));
